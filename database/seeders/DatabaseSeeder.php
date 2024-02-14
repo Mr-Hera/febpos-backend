@@ -13,14 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $product1 = Product::create([
-            'name' => 'Bamburi Cement',
-            'unit' => 'kgs',
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        ]);
+        // $product1 = Product::create([
+        //     'name' => 'Bamburi Cement',
+        //     'unit' => 'kgs',
+        //     'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        // ]);
 
-        $product1->category()->create([
-            'name' => 'Cement',
-        ]);
+        // $product1->category()->create([
+        //     'name' => 'Cement',
+        // ]);
     }
 }

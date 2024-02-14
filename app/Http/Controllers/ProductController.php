@@ -38,7 +38,6 @@ class ProductController extends Controller
         ]);
 
         $product = Product::where('name', $request->name)->first();
-        // return($product->sales[0]);
 
         // if record exists update
         if(!$product) {

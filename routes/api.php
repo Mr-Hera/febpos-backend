@@ -15,14 +15,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
 Route::group(['prefix' =>'v1'], function() {
     Route::get('products', [ProductController::class, 'index'])->name('get-product');
     Route::post('products', [ProductController::class, 'store'])->name('create-product');
-
-    Route::get('sales', [ProductController::class, 'index'])->name('get-sales');
-    Route::post('sales', [ProductController::class, 'create'])->name('generate-sales');
 });

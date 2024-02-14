@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('product_id');
-            $table->integer('sales_count');
+            $table->unsignedInteger('sales_count')->default(0);
             $table->integer('price');
             $table->timestamps();
         });

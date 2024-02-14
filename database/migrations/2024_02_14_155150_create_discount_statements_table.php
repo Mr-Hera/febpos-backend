@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('discount_statements', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('product_id')->nullable();
             $table->string('name');
+            $table->string('category');
+            $table->string('unit');
+            $table->integer('price');
+            $table->string('discount')->nullable()->default('Applied');
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('discount_statements');
     }
 };

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Product;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +13,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        // $product1 = Product::create([
+        //     'name' => 'Bamburi Cement',
+        //     'unit' => 'kgs',
+        //     'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        // ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        // $product1->category()->create([
+        //     'name' => 'Cement',
         // ]);
     }
 }

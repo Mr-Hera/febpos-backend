@@ -11,6 +11,11 @@ class Sale extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'sales_count',
+        'price',
+    ];
+
     public function saleItem() {
         return $this->hasOne(SaleItem::class);
     }
